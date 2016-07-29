@@ -1,0 +1,20 @@
+<ion-content id="cnt" #popoverContent padding>
+
+    <div class="navtitle">
+        <ion-buttons class="left-btn inline">
+            <button clear small white (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <h2 class="inline title" padding-vertical>{{try}}</h2>
+    </div>
+
+    <ion-row *ngFor="let l of counter(ligne); let i = index">
+        <ion-col *ngFor="let l of counter(col); let j = index">
+            <ion-card #popoverCard [id]="'card' + i + '' + j" class="card-background-page">
+                <img #popoverImg [id]="i + '' + j" class="padding-img popoverImg" (click)="changeImg(i, j)" src="/assets/img/{{theme}}.png"/>
+            </ion-card>
+        </ion-col> 
+    </ion-row>
+
+</ion-content>

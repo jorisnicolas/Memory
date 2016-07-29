@@ -1,0 +1,51 @@
+.home {
+  background-color: white;
+  
+  .row-dots {
+      text-align: center;
+    }
+
+    .dot {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        margin: 10px auto;
+        position: relative;
+        border: 1px solid #c8c7cc;
+        background-color: white;
+        padding-left: 14px;
+    }
+
+    .dot.selected {
+        border-width: 2px !important;
+    }
+    
+    .dot-sport.selected {
+        border-color: $sport-navy !important;
+        color: $sport-red;
+        padding-left: 13px !important;
+    }
+
+    .dot-science.selected {
+        border-color: $science-light !important;
+        color: $science-gray;
+        padding-left: 13px !important;
+    }
+
+    .dot-astro.selected {
+        border-color: $astro-yellow !important;
+        color: $astro-blue;
+        padding-left: 13px !important;
+    }
+
+    .dot-env.selected {
+        border-color: $env-blue !important;
+        color: $env-green;
+        padding-left: 13px !important;
+    }
+
+    .center{
+        margin:auto;
+        width: 100%;
+    }
+}

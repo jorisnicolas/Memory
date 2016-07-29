@@ -1,0 +1,47 @@
+<ion-content class="home" padding>
+    <ion-list no-margin>
+    <ion-list-header><span text-left>Themes</span><span item-right>{{strTheme}}</span></ion-list-header>
+        <ion-row class="row-dots">
+            <ion-col>
+            <button (click)="changeTheme('sport')" category="dot" class="disable-hover dot dot-sport dot-default" [class.selected]="theme == 'sport'" ng-reflect-category="dot">
+                <ion-icon big name="american-football"></ion-icon>
+                <span class="button-inner"></span>
+            </button>
+            </ion-col>
+            <ion-col>
+            <button (click)="changeTheme('science')" category="dot" class="disable-hover dot dot-science dot-default" [class.selected]="theme == 'science'" ng-reflect-category="dot">
+                <ion-icon big name="flask"></ion-icon>
+                <span class="button-inner"></span>
+            </button>
+            </ion-col>
+            <ion-col>
+            <button (click)="changeTheme('env')" category="dot" class="disable-hover dot dot-env dot-default" [class.selected]="theme == 'env'" ng-reflect-category="dot">
+                <ion-icon big name="leaf"></ion-icon>
+                <span class="button-inner"></span>
+            </button>
+            </ion-col>
+            <ion-col>
+            <button (click)="changeTheme('astro')" category="dot" class="disable-hover dot dot-astro dot-default" [class.selected]="theme == 'astro'" ng-reflect-category="dot">
+                <ion-icon big name="planet"></ion-icon>
+                <span class="button-inner"></span>
+            </button>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+    <ion-list no-margin>
+        <ion-list-header><span text-left>Difficulty</span><span item-right>{{strDiff}}</span></ion-list-header>
+        <ion-item>
+            <ion-range min="3" max="5" step="1" snaps="true" 
+                        danger no-padding padding-vertical 
+                        [(ngModel)]="difficulty"
+                        (ionChange)="changeDifficulty(difficulty)">
+                <ion-icon small range-left><img  width="25" src="assets/img/smallOak.png" alt=""></ion-icon>
+                <ion-icon range-right><img width="35" src="assets/img/bigOak.png" alt=""></ion-icon>
+            </ion-range>
+        </ion-item>
+        
+    </ion-list>
+<button (click)="push()" class="center" large dark clear>
+    <ion-icon style="font-size: 2.5em" padding-left name="game-controller-a"></ion-icon>
+</button>
+</ion-content>
